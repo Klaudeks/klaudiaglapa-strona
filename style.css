@@ -1,0 +1,253 @@
+:root {
+    /* Paleta: Pastelowa Akwarela / Różana Oaza */
+    --bg-color: #fdfafb;         /* Bardzo jasny, rozbielony pudrowy róż */
+    --text-main: #4a383d;        /* Głęboki, zgaszony brudny róż/brąz do tekstów */
+    --accent: #dca7a5;           /* Ciepły, pastelowy różowy (przyciski, akcenty) */
+    --card-bg: rgba(255, 255, 255, 0.6); /* Mleczne szkło pasujące do jasnego tła */
+    --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    color: var(--text-main);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    
+    /* Ustawienia wysokości i tła */
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #fdfafb, #fbdae9, #ffc3d28e, #ffc8d296);
+    background-size: 400% 400%;
+    background-attachment: fixed; /* <-- To jest kluczowe! Zamraża gradient w oknie */
+    animation: oddychanie 15s ease infinite;
+}
+
+/* Nawigacja Glassmorphism */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 5%;
+    background: #f4cbdd); /* Jasne, różane tło */
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-decoration: none; /* Usuwa domyślne podkreślenie linku */
+    color: var(--text-main); /* Wymusza kolor zgodny z resztą strony */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Sekcje */
+.section {
+    min-height: 100vh;
+    padding: 100px 5% 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hero {
+    background-image: linear-gradient(#fbdae9, #fbdae977), url('https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    text-shadow: none; /* Usuwamy czarny cień, który pasował tylko do Dark Mode */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: #8c7379; /* Ciemniejszy, ciepły, zgaszony róż dla lepszej czytelności */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #4a5d56;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(94, 139, 126, 0.2);
+}
+
+/* Typografia */
+h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+/* Układy Grid/Flex */
+.dual-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.image-content img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+/* Karty i Formularze */
+.card, .cert-item {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.5);
+    transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.card:hover, .cert-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08); /* Lekkie rozjaśnienie ciemnego szkła */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid rgba(74, 56, 61, 0.15);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.6);
+    font-family: var(--font);
+    font-size: 1rem;
+    color: var(--text-main);
+    outline: none;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--accent);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #778a83;
+}
+
+/* Animacje Lusion-lite */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .dual-col { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.5rem; }
+    .nav-links { display: none; /* W wersji pro ukryte, można dodać hamburger menu */ }
+}
+
+/* Tworzy delikatne, rozmyte "światła" w tle */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: 
+        radial-gradient(circle at 15% 50%, rgba(127, 174, 159, 0.08), transparent 40%),
+        radial-gradient(circle at 85% 30%, rgba(127, 174, 159, 0.06), transparent 40%);
+    z-index: -1; /* Trzyma poświaty pod tekstem */
+    pointer-events: none;
+}
+
+/* Nakłada organiczny, elegancki mikroszum na całą stronę (jak w Lusion) */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999; /* Szum jest na samej górze, ale można przez niego klikać */
+}

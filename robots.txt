@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https:/klaudiaglapa.pl/sitemap.xml
+Sitemap: https://klaudiaglapa.pl/sitemap.xml

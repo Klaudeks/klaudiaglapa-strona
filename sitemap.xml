@@ -2,26 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://klaudiaglapa.pl/</loc>
-    <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://klaudiaglapa.pl/faq.html/</loc>
-    <priority>1.00</priority>
+    <loc>https://klaudiaglapa.pl/faq</loc>
   </url>
   <url>
-    <loc>https://klaudiaglapa.pl/o-mnie.html/</loc>
-    <priority>1.00</priority>
+    <loc>https://klaudiaglapa.pl/o-mnie</loc>
   </url>
   <url>
-    <loc>https://klaudiaglapa.pl/kwalifikacje.html/</loc>
-    <priority>1.00</priority>
+    <loc>https://klaudiaglapa.pl/kwalifikacje</loc>
   </url>
   <url>
-    <loc>https://klaudiaglapa.pl/wspolpraca.html/</loc>
-    <priority>1.00</priority>
+    <loc>https://klaudiaglapa.pl/wspolpraca</loc>
   </url>
   <url>
-    <loc>https://klaudiaglapa.pl/polityka-prywatnosci.html/</loc>
-    <priority>1.00</priority>
+    <loc>https://klaudiaglapa.pl/polityka-prywatnosci</loc>
   </url>
 </urlset>

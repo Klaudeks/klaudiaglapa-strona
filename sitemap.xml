@@ -5,27 +5,23 @@
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://klaudiaglapa.pl/</loc>
+    <loc>https://klaudiaglapa.pl/faq.html/</loc>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://klaudiaglapa.pl/o-mnie/</loc>
+    <loc>https://klaudiaglapa.pl/o-mnie.html/</loc>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://klaudiaglapa.pl/konstultacja_1/</loc>
+    <loc>https://klaudiaglapa.pl/kwalifikacje.html/</loc>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://klaudiaglapa.pl/konstultacja_2/</loc>
+    <loc>https://klaudiaglapa.pl/wspolpraca.html/</loc>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://klaudiaglapa.pl/konstultacja_3/</loc>
-    <priority>1.00</priority>
-  </url>
-  <url>
-    <loc>https://klaudiaglapa.pl/certyfikaty/</loc>
+    <loc>https://klaudiaglapa.pl/polityka-prywatnosci.html/</loc>
     <priority>1.00</priority>
   </url>
 </urlset>

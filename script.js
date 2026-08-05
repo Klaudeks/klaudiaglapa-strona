@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Płynne przewijanie dla linków nawigacji
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -9,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Animacje pojawiania się przy przewijaniu (Intersection Observer)
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -28,4 +26,34 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.fade-in').forEach(section => {
         observer.observe(section);
     });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const faqItem = button.parentElement;
+
+            faqItem.classList.toggle('active');
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Zamknij menu mobilne po kliknięciu w dowolny link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    }
 });

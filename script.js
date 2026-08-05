@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.15
-    };
+    root: null,
+    rootMargin: '0px 0px -50px 0px', 
+    threshold: 0.02
+};
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
